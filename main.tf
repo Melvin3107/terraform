@@ -14,9 +14,13 @@ variable "ssh_key" {
   default     = "ee:49:51:1d:6e:84:94:56:2b:b7:c8:de:2b:1c:42:2e"
 }
 
+
+
 provider "digitalocean" {
   token = var.do_token
 }
+
+
 
 resource "digitalocean_droplet" "web" {
   image  = "ubuntu-20-04-x64"
@@ -44,8 +48,3 @@ resource "digitalocean_droplet" "web" {
   }
 }
 
-resource "digitalocean_droplet_firewall" "web_firewall" {
-  droplet_ids = [digitalocean_droplet.web.id]
-  firewall_id = "Firewall"
-  id = data.digitalocean_firewall.existing.id
-}
