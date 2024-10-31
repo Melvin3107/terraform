@@ -37,7 +37,7 @@ resource "digitalocean_droplet" "web" {
       type        = "ssh"
       user        = "root"
       host        = self.ipv4_address
-      private_key = file("~/.ssh/id_rsa")
+      private_key = file("~/.ssh/id_ed25519")
     }
   }
 }
