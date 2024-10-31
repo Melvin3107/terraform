@@ -12,7 +12,7 @@ variable "do_token" {
     type        = string
 }
 
-variable "ssh_key" {
+variable "ssh_key_do" {
     description = "ssh-key"
     type        = string
 }
@@ -26,7 +26,7 @@ resource "digitalocean_droplet" "web" {
   name   = "discard"
   region = "nyc1"
   size   = "s-1vcpu-1gb"
-  ssh_keys = [var.ssh_key_id]
+  ssh_keys = [var.ssh_key_do]
 
     provisioner "remote-exec" {
       inline = [
