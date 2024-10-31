@@ -10,8 +10,6 @@ terraform {
 variable "do_token" {}
 
 variable "ssh_key" {
-  description = "Huella digital de la clave SSH"
-  default     = "ee:49:51:1d:6e:84:94:56:2b:b7:c8:de:2b:1c:42:2e"
 }
 
 provider "digitalocean" {
