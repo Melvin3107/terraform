@@ -7,15 +7,9 @@ terraform {
   }
 }
 
-variable "do_token" {
-    description = "discard"
-    type        = string
-}
+variable "do_token" {}
 
-variable "ssh_key" {
-    description = "ssh-key"
-    type        = string
-}
+variable "ssh_key" {}
 
 provider "digitalocean" {
   token = var.do_token
