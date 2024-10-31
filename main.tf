@@ -37,7 +37,7 @@ resource "digitalocean_droplet" "web" {
       type        = "ssh"
       user        = "root"
       host        = self.ipv4_address
-      private_key = file("~/.id_ed25519") 
+      private_key = file("/var/jenkins_home/.ssh/id_ed25519") 
       agent       = false  
     }
     
