@@ -33,12 +33,7 @@ resource "digitalocean_droplet" "web" {
         "sudo systemctl enable docker",
         "sudo usermod -aG docker $USER"
     ]
-    connection {
-      type        = "ssh"
-      user        = "root"
-      host        = self.ipv4_address
-      private_key = file("~/.ssh/id_ed25519")
-    }
+    
   }
 }
 
