@@ -8,12 +8,12 @@ terraform {
 }
 
 variable "do_token" {
-    description = "discard"
+    description = "Token de DigitalOcean"
     type        = string
 }
 
-variable "ssh_key_do" {
-    description = "ssh-key"
+variable "ssh_key" {
+    description = "ID de la clave SSH"
     type        = string
 }
 
@@ -26,7 +26,7 @@ resource "digitalocean_droplet" "web" {
   name   = "discard"
   region = "nyc1"
   size   = "s-1vcpu-1gb"
-  ssh_keys = [var.ssh_key_do]
+  ssh_keys = [var.ssh_key]
 
     provisioner "remote-exec" {
       inline = [
