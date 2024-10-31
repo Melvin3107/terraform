@@ -8,17 +8,12 @@ terraform {
 }
 
 variable "do_token" {
-    description = "Token de API de DigitalOcean"
+    description = "discard"
     type        = string
 }
 
 variable "ssh_key_id" {
-    description = "ID de la clave pública SSH en DigitalOcean"
-    type        = string
-}
-
-variable "private_key" {
-    description = "Clave privada para SSH"
+    description = "ssh-key"
     type        = string
 }
 
