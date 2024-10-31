@@ -45,6 +45,7 @@ resource "digitalocean_droplet" "web" {
 }
 
 resource "digitalocean_droplet_firewall" "web_firewall" {
-  droplet_id = digitalocean_droplet.web.id
+  droplet_ids = [digitalocean_droplet.web.id]
   firewall_id = "Firewall"
+  id = data.digitalocean_firewall.existing.id
 }
