@@ -23,7 +23,7 @@ resource "digitalocean_droplet" "web" {
   name   = "discard"
   region = "nyc1"
   size   = "s-1vcpu-1gb"
-  ssh_keys = "ssh-key"
+  ssh_keys = "ee:49:51:1d:6e:84:94:56:2b:b7:c8:de:2b:1c:42:2e"
 
     provisioner "remote-exec" {
       inline = [
